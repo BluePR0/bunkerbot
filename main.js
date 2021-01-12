@@ -9,7 +9,7 @@ client.on('ready', () => {
 })
 
 client.on('message', async message => {
-    if (message.channel.name == "bunker") {
+    if (message.channel.id == "798463800730583091") {
         if (!message.content.startsWith(prefix) || message.author.bot) {
             setTimeout(() => { message.delete(); console.log('Delete Message') }, 5000);
         }
