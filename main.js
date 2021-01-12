@@ -9,7 +9,7 @@ client.on('ready', () => {
 })
 
 client.on('message', async message => {
-    if (message.guild.GuildChannel.name.toLowerCase() == "bunker") {
+    if (message.channel.name.toLowerCase() == "bunker") {
         if (!message.content.startsWith(prefix) || message.author.bot) {
             setTimeout(() => { message.delete(); console.log('Delete Message') }, 3000);
         }
@@ -20,9 +20,8 @@ client.on('message', async message => {
         const args = message.content.slice(prefix.length).split(/ +/);
         const command = args.shift().toLowerCase();
     }
-    else
-    {
-        console.log("Not Bunker Channel");
+    else {
+        console.log("Not Bunker Channel - " + message.channel.name);
     }
 });
 
