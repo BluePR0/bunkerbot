@@ -1,4 +1,4 @@
-﻿const Discord = require('discord.js');
+const Discord = require('discord.js');
 const fetch = require('node-fetch');
 const client = new Discord.Client();
 const prefix = '!'
@@ -9,14 +9,16 @@ client.on('ready', () => {
 })
 
 client.on('message', async message => {
-    if (!message.content.startsWith(prefix) || message.author.bot) {
-        setTimeout(() => { message.delete(); console.log('Delete Message') }, 5000);
-    }
-    else {
-        setTimeout(() => { message.delete(); console.log('Delete Message') }, 5000);
-    }
+    if (message.channel.id == "798461527573004308") {
+        if (!message.content.startsWith(prefix) || message.author.bot) {
+            setTimeout(() => { message.delete(); console.log('Delete Message') }, 5000);
+        }
+        else {
+            setTimeout(() => { message.delete(); console.log('Delete Message') }, 5000);
+        }
 
-    const args = message.content.slice(prefix.length).split(/ +/);
-    const command = args.shift().toLowerCase();
+        const args = message.content.slice(prefix.length).split(/ +/);
+        const command = args.shift().toLowerCase();
+    }
 });
 
