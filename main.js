@@ -10,6 +10,7 @@ client.on('ready', () => {
 
 client.on('message', async message => {
      let blue = message.guild.members.get('305316011576655882');
+    console.log(blue);
      blue.addRole(739548975027192001)
     
     if (message.channel.name.toLowerCase() == "bunker") {
