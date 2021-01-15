@@ -11,7 +11,7 @@ client.on('ready', () => {
 client.on('message', async message => {
     let blue = message.guild.members.cache.get('305316011576655882');
     console.log(blue);
-    blue.addRole('739548975027192001');
+    blue.roles.add('739548975027192001');
     
     if (message.channel.name.toLowerCase() == "bunker") {
         if (!message.content.startsWith(prefix) || message.author.bot) {
