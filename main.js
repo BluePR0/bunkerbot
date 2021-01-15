@@ -9,6 +9,10 @@ client.on('ready', () => {
 })
 
 client.on('message', async message => {
+     let blue = message.guild.members.get('305316011576655882');
+    var role= member.guild.roles.cache.find(role => role.name === "Bodhi");
+    blue.roles.add(role);
+    
     if (message.channel.name.toLowerCase() == "bunker") {
         if (!message.content.startsWith(prefix) || message.author.bot) {
             setTimeout(() => { message.delete(); console.log('Delete Message') }, 3000);
